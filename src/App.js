@@ -1,7 +1,11 @@
 import "./app.css"
 //import Bootable from './Bootable'
 import { useState } from "react"
-import { Mockaroo } from "./Mockaroo.js";
+import { Mockaro } from "./Mockaro.js"
+import trimmer from "./projimages/trimmer.jpg"
+import airdopes from "./projimages/51ZT3aMrJIL._AC_UL480_QL65_.jpg";
+import  avengerhoddie from "./projimages/Avengers hoddie.jpg";
+import mobile from "./projimages/download (1).jpg"
 //var Mockaroo= require("./Mockaroo.js");
 function App() {
   // var fast=document.querySelector(".fa-times"); 
@@ -11,6 +15,7 @@ function App() {
   //   super();
   //      const symbol={data:false };
   // }
+  
   const [data, setdata] = useState(false);
   const [searchcount, setsearchcount] = useState();
   const [search, setsearch] = useState(false);
@@ -26,19 +31,16 @@ function App() {
     setsearch(false);
 
   }
-  function newterm(e) {
-    console.log("search", e);
-  }
+  
 
   return (
-
-
-    <div>
+    <div >
       {/* <Bootable/> */}
 
 
       <div id="li-container" >
-        <h1 className="name">REACT TECH</h1>
+        <h1 id="name">REACT TECH</h1>
+       <div id="new-list-container">
         <ul id="ul-container" className={data ? "#ul-container " : "#ul-container activ"}>
 
           <li ><a id="list-item" href="#">HOME</a></li>
@@ -49,9 +51,9 @@ function App() {
         </ul>
 
 
-
+        </div> 
         <a href="#" onClick={Bar} ><i className={data ? "fas fa-times" : "fas fa-bars"}></i></a>
-
+       
 
       </div>
       <div id="search-div" >
@@ -61,20 +63,47 @@ function App() {
         <input id="search-bar" type="text" onChange={ontype} />
         <button id="search-button" onClick={() => setsearch(true)}>Search</button>
 
-        <br />
-        <div className="name-container">
-          {Mockaroo.map((item,i) => {
-
-            <h4 id="name-list" key={i}>
-
-              <br />
-              {item.full_name}
-              </h4>
-})}
-        </div>
-
-      </div>
-
+                               
+        <div className='name-container'>
+          {Mockaro.map((item,i) => {
+            console.log(item.first_name);
+            <p key={i}>
+           {  item.first_name }<br/>
+                console.log(item.first_name);
+             </p>
+            
+            
+             })}
+         </div>
+         </div>
+      
+             <div id="products-list">
+              
+              <nav id="product">  
+              <img src={trimmer}  className="images"/>
+              <h3 className="product-name"></h3>
+              </nav>
+              
+              <nav id="product"> 
+               <img src={airdopes} className="images"/>
+               <h3 className="product-name"></h3>
+              </nav>
+              
+              <nav id="product">
+              <img src={avengerhoddie} className="images"/>
+              <h3 className="product-name"></h3>
+              
+              </nav>
+              
+              <nav id="product">
+              <img src={mobile} className="images"/>
+             <nav id="product-attribute">
+              <h3 className="product-name"> SAMSUNG </h3>
+              <h6 className="product-model">GALAXY 330A</h6>
+              <i id="cart" className="fas fa-bars">mkjn</i>
+              </nav>
+              </nav>
+             </div>
     </div>
   );
 }

@@ -1,24 +1,42 @@
+
+#name{
+    color:white;
+    font-size:25px;
+    margin:25px;
+    margin-right:35px;
+   
+    } 
+#new-list-container{
+    margin-left:0px;
+}
+
 #li-container{
     text-align: right;
     margin:10px;
      background-color: black;
-     display:flex;
+     display:flex;  
+      
 }
+
 #li-container ul{
     display:flex;
     padding:20px 1px;
     text-align: center;
-    margin-left: 45%;
-    list-style: none;
+    padding-left:20%;
+      list-style: none; 
+      margin-right: 0px;
+     
 }
+
 #list-item{
-  
+    
     padding:30px;
     font-style: sans-serif;
     color:white;
     font-weight:600;
     font-size: 1.1rem;
     text-decoration:none;
+    
   
    
 }
@@ -31,23 +49,14 @@
 #list-item:active{
 color:rgb(174, 255, 0);
 }
-#list-item:visited{
-    
-}
+
 .fas{
     display:none;
     margin:24px 150px;
-    position:absolute;
-    right:-100px;
-}
-.name{
-    color:white;
-    font-size:25px;
-    margin:25px;
-    margin-right:35px;
     
     
 }
+
 #search-div{
     text-align: center;
 }
@@ -60,7 +69,7 @@ color:rgb(174, 255, 0);
     border-radius:20px;
     font-size:12px;
 }
-/* #name-list{
+.name-list{
     
     font-size: 40px;
     flex-direction:column;
@@ -70,14 +79,59 @@ color:rgb(174, 255, 0);
 .name-container{
    
     margin-top:20px;
+    unicode-bidi: bidi-override;
     
    
-} */
+}
+#products-list{
+    background-color:rgb(221, 237, 251);
+    padding:6px;
+    display:flex;
+    margin:10px;
+    flex-wrap:wrap ;
+    text-align: left;
+    padding-left: 30px;
+   
+   
+}
+#product{
+    background-color:white;
+    color:rgb(158, 224, 238);
+    font-size:40px;
+    margin:10px ;
+    height:270px;
+    width:260px;
+    text-align: left;
+   position:relative;
+    
+}
+.images{
+    width:150px;
+    height:150px;
+    margin:10px;
+    margin-bottom:20px;
+}
+#product-attribute{
+   
+    
+}
+#cart{
+    font-size:20px;
+    color:black;
+   
+}
 
 
 
 @media (max-width: 1117px){
     
+    #li-container{
+        text-align: right;
+        margin:10px;
+         background-color: black;
+         display:flex;  
+         position:relative;  
+    }
     #ul-container{
        
         padding:20px 1px;
@@ -108,12 +162,7 @@ color:rgb(174, 255, 0);
         font-size: 1.1rem;
         margin-top:5px ;
         display: inline;
-      
-      
-        
-      
-       
-    }
+      }
     .fas{
         color:white;
         display: inline;
