@@ -39,7 +39,7 @@ function App() {
 
 
       <div id="li-container" >
-        <h1 id="name">REACT TECH</h1>
+        <h1 id="name">REACT TECH is the best</h1>
        <div id="new-list-container">
         <ul id="ul-container" className={data ? "#ul-container " : "#ul-container activ"}>
 
